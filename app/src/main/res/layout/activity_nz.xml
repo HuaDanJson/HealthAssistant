@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent">
+    <include layout="@layout/common_toolbar"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button android:text="设置定时提醒" android:id="@+id/Button01"
+        style="@style/cbutton_orange"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:layout_marginTop="32dp"
+
+        android:text="取消定时提醒" android:id="@+id/Button02"
+        style="@style/cbutton_orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    </LinearLayout>
+</LinearLayout>

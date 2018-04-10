@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notification_simple_pedometer_description_text_color">#9E9E9E</color>
+    <color name="notification_simple_pedometer_title_text_color">#9E9E9E</color>
+    <dimen name="notification_simple_pedometer_content_left_margin">8dp</dimen>
+    <dimen name="notification_simple_pedometer_content_right_margin">8dp</dimen>
+    <dimen name="notification_simple_pedometer_description_text_size">14sp</dimen>
+    <dimen name="notification_simple_pedometer_icon_max_height">48dp</dimen>
+    <dimen name="notification_simple_pedometer_icon_max_width">48dp</dimen>
+    <dimen name="notification_simple_pedometer_min_hight">64dp</dimen>
+    <dimen name="notification_simple_pedometer_progressbar_max_height">48dp</dimen>
+    <dimen name="notification_simple_pedometer_progressbar_max_width">48dp</dimen>
+    <dimen name="notification_simple_pedometer_title_text_size">20sp</dimen>
+    <string name="action_pedometer_service_label">记步器服务</string>
+    <string name="app_name">PedometerLibrary</string>
+    <string name="notification_simple_pedometer_description">今日步数</string>
+    <string name="notification_simple_pedometer_title">%1$d步</string>
+</resources>
