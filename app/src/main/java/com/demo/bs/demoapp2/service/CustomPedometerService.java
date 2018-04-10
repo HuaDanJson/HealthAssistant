@@ -15,6 +15,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.demo.bs.demoapp2.R;
 import com.pedometerlibrary.common.PedometerConstants;
 import com.pedometerlibrary.service.BasePedometerService;
 
@@ -101,7 +102,7 @@ public class CustomPedometerService extends BasePedometerService {
 
     @Override
     public void onNotSupported() {
-        
+
     }
 
     @Nullable
@@ -133,7 +134,7 @@ public class CustomPedometerService extends BasePedometerService {
                 .setAutoCancel(true)
                 .setOngoing(true)
                 .setDefaults(Notification.FLAG_AUTO_CANCEL)
-                .setSmallIcon(android.R.drawable.sym_def_app_icon);
+                .setSmallIcon(R.mipmap.run_log);
         startForeground(NOTIFY_ID, builder.build());
         target = DEFULT_TARGET;
     }
@@ -144,7 +145,8 @@ public class CustomPedometerService extends BasePedometerService {
     @SuppressLint("RestrictedApi")
     public void setNotify() {
         builder.setContentTitle(String.valueOf(getStep()) + " 步");
-        builder.setContentText("今日步数");
+        builder.setContentText("个人健康APP统计出今日步数：");
+        builder.setSmallIcon(R.mipmap.run_log);
         notificationManager.notify(NOTIFY_ID, builder.build());
     }
 

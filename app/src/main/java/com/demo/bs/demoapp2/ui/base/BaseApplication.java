@@ -34,8 +34,8 @@ public class BaseApplication extends Application {
      */
     private void initDefault() {
         Pedometer.initialize(this, new PedometerOptions.Builder()
-                .setSamllIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(R.mipmap.ic_launcher)
+                .setSamllIcon(R.mipmap.run_log)
+                .setLargeIcon(R.mipmap.run_log)
                 .setNotify(PedometerOptions.Notify.SIMPLE)
                 .build());
     }
