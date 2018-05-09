@@ -20,7 +20,7 @@ public class MainActivity extends BaseActivity {
     private ListView lv;
     private SimpleAdapter simpleAdapter;
     private List<HashMap<String, Object>> list;
-    private String[] type = {"健康趋势", "健康数据", "个人档案", "健康资讯", " 健康指数", "计步器"};
+    private String[] type = {"健康趋势", "健康数据", "个人档案", "健康资讯", " 健康指数", "计步器", "闹钟"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +47,6 @@ public class MainActivity extends BaseActivity {
                         //基本特征
                         go(JBTZActivity.class);
                         break;
-//                    case 2:
-//                        //检测提醒
-////                        Intent intent = new Intent();
-////                        intent.setClass(MainActivity.this, com.loonggg.alarmmanager.clock.ClockMainActivity.class);
-////                        startActivity(intent);
-////                        go(NZActivity.class);
-//                        break;
                     case 2:
                         //个人档案
                         go(DAActivity.class);
@@ -72,6 +65,13 @@ public class MainActivity extends BaseActivity {
                     case 5:
                         //计步器
                         go(PedometerActivity.class);
+                        break;
+                    case 6:
+                        //检测提醒
+                        Intent intent2 = new Intent();
+                        intent2.setClass(MainActivity.this, com.loonggg.alarmmanager.clock.ClockMainActivity.class);
+                        startActivity(intent2);
+//                        go(NZActivity.class);
                         break;
                     default:
                         break;

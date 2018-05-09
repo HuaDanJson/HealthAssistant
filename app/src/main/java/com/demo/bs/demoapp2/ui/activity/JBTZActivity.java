@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.MultiAutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +22,6 @@ import com.demo.bs.demoapp2.R;
 import com.demo.bs.demoapp2.ui.base.BaseActivity;
 import com.demo.bs.demoapp2.utils.GlobalValue;
 import com.demo.bs.demoapp2.utils.HttpUtil;
-import com.demo.bs.demoapp2.xl.xinlv.activity.XLMainActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -156,26 +154,37 @@ public class JBTZActivity extends BaseActivity implements View.OnClickListener {
             }else {
                 switch (kind){
                     case "血压":
+                        Log.i("aaa","111  = "+kind);
                         setXueYaRemind();
                         break;
                     case "心率":
+                        Log.i("aaa","222  = "+kind);
                         setXinLvRemind();
                         break;
                     case "体温":
+                        Log.i("aaa","333  = "+kind);
                         setTiWenRemind();
                         break;
                     case "血糖":
+                        Log.i("aaa","444  = "+kind);
                         setXueTangRemind();
                         break;
                     case "体重":
+                        Log.i("aaa","555  = "+kind);
                         setTiZhongRemind();
                         break;
                     case "步数":
+                        Log.i("aaa","666  = "+kind);
                         setBuShuRemind();
                         break;
                     case "体脂率":
+                        Log.i("aaa","777  = "+kind);
                         setTiZhiRemind();
                         break;
+
+                        default:
+                            Log.i("aaa","888  = "+kind);
+                            break;
 
                 }
             }

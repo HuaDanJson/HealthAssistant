@@ -24,11 +24,12 @@ public class DBUserInfoBean {
     public String FanHouXueTang;
     public String guoMinYaoWu;
     public String liShiJiBing;
+
     @Generated(hash = 160639814)
     public DBUserInfoBean(long userId, String name, String nianLing, String sex,
-            String shenGao, String tiZhong, String shouSuoYa, String shuZhangYa,
-            String kongFuXueTang, String FanHouXueTang, String guoMinYaoWu,
-            String liShiJiBing) {
+                          String shenGao, String tiZhong, String shouSuoYa, String shuZhangYa,
+                          String kongFuXueTang, String FanHouXueTang, String guoMinYaoWu,
+                          String liShiJiBing) {
         this.userId = userId;
         this.name = name;
         this.nianLing = nianLing;
@@ -42,78 +43,103 @@ public class DBUserInfoBean {
         this.guoMinYaoWu = guoMinYaoWu;
         this.liShiJiBing = liShiJiBing;
     }
+
     @Generated(hash = 911723735)
     public DBUserInfoBean() {
     }
+
     public long getUserId() {
         return this.userId;
     }
+
     public void setUserId(long userId) {
         this.userId = userId;
     }
+
     public String getName() {
         return this.name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getNianLing() {
         return this.nianLing;
     }
+
     public void setNianLing(String nianLing) {
         this.nianLing = nianLing;
     }
+
     public String getSex() {
         return this.sex;
     }
+
     public void setSex(String sex) {
         this.sex = sex;
     }
+
     public String getShenGao() {
         return this.shenGao;
     }
+
     public void setShenGao(String shenGao) {
         this.shenGao = shenGao;
     }
+
     public String getTiZhong() {
         return this.tiZhong;
     }
+
     public void setTiZhong(String tiZhong) {
         this.tiZhong = tiZhong;
     }
+
     public String getShouSuoYa() {
         return this.shouSuoYa;
     }
+
     public void setShouSuoYa(String shouSuoYa) {
         this.shouSuoYa = shouSuoYa;
     }
+
     public String getShuZhangYa() {
         return this.shuZhangYa;
     }
+
     public void setShuZhangYa(String shuZhangYa) {
         this.shuZhangYa = shuZhangYa;
     }
+
     public String getKongFuXueTang() {
         return this.kongFuXueTang;
     }
+
     public void setKongFuXueTang(String kongFuXueTang) {
         this.kongFuXueTang = kongFuXueTang;
     }
+
     public String getFanHouXueTang() {
         return this.FanHouXueTang;
     }
+
     public void setFanHouXueTang(String FanHouXueTang) {
         this.FanHouXueTang = FanHouXueTang;
     }
+
     public String getGuoMinYaoWu() {
         return this.guoMinYaoWu;
     }
+
     public void setGuoMinYaoWu(String guoMinYaoWu) {
         this.guoMinYaoWu = guoMinYaoWu;
     }
+
     public String getLiShiJiBing() {
         return this.liShiJiBing;
     }
+
     public void setLiShiJiBing(String liShiJiBing) {
         this.liShiJiBing = liShiJiBing;
     }

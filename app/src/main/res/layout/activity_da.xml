@@ -1,24 +1,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.demo.bs.demoapp2.ui.activity.LoginActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              tools:context="com.demo.bs.demoapp2.ui.activity.LoginActivity">
+
     <include layout="@layout/common_toolbar"/>
 
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:paddingTop="@dimen/activity_vertical_margin">
 
         <LinearLayout
-            android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
 
@@ -32,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:hint="姓名"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -47,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:hint="年龄"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:hint="性别"
                         android:maxLines="1"
-                        android:singleLine="true" />
+                        android:singleLine="true"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -76,9 +77,10 @@
                     android:layout_height="wrap_content"
                     android:hint="身高(cm)"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -91,22 +93,22 @@
                     android:layout_height="wrap_content"
                     android:hint="体重(kg)"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
             <!--<android.support.design.widget.TextInputLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
-                <!--<EditText-->
+            <!--<EditText-->
 
-                    <!--android:enabled="false"-->
-                    <!--android:id="@+id/edt_xl"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:hint="心率"-->
-                    <!--android:maxLines="1"-->
-                    <!--android:singleLine="true" />-->
+            <!--android:enabled="false"-->
+            <!--android:id="@+id/edt_xl"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="心率"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true" />-->
 
             <!--</android.support.design.widget.TextInputLayout>-->
             <android.support.design.widget.TextInputLayout
@@ -120,9 +122,10 @@
                     android:layout_height="wrap_content"
                     android:hint="生日"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -134,39 +137,38 @@
                     android:layout_height="wrap_content"
                     android:hint="职业"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-                <EditText
-
-
-                    android:id="@+id/edt_kfxt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="过敏药物1"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-
-            </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:id="@+id/edt_kfxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="过敏药物1"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
 
+            </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
                     android:id="@+id/edt_fhxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="过敏药物2"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -177,9 +179,10 @@
                     android:layout_height="wrap_content"
                     android:hint="历史疾病1"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -190,37 +193,34 @@
                     android:layout_height="wrap_content"
                     android:hint="历史疾病2"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
             </android.support.design.widget.TextInputLayout>
             <!--<android.support.design.widget.TextInputLayout-->
 
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
 
-                <!--<EditText-->
+            <!--<EditText-->
 
-                    <!--android:enabled="false"-->
-                    <!--android:id="@+id/edt_tw"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:hint="体温"-->
-                    <!--android:maxLines="1"-->
-                    <!--android:singleLine="true" />-->
+            <!--android:enabled="false"-->
+            <!--android:id="@+id/edt_tw"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="体温"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true" />-->
 
             <!--</android.support.design.widget.TextInputLayout>-->
             <Button
-                android:layout_alignParentRight="true"
                 android:id="@+id/btn_submit"
-                android:layout_marginTop="16dp"
-                android:text="修改"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/btn_orange_selector"
-                />
-
-
+                android:text="修改"
+                android:textColor="@color/white"/>
 
 
         </LinearLayout>

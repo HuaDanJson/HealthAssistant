@@ -4,7 +4,9 @@ import android.app.Application;
 
 import com.demo.bs.demoapp2.DBBeanUtils.DBLuRuShuJvBeanUtils;
 import com.demo.bs.demoapp2.DBBeanUtils.DBUserInfoBeanUtils;
+import com.demo.bs.demoapp2.DBBeanUtils.DBUserUtils;
 import com.demo.bs.demoapp2.R;
+import com.demo.bs.demoapp2.utils.ToastHelper;
 import com.pedometerlibrary.Pedometer;
 import com.pedometerlibrary.common.PedometerOptions;
 
@@ -27,6 +29,8 @@ public class BaseApplication extends Application {
         DBUserInfoBeanUtils.Init(getApplicationContext());
         DBLuRuShuJvBeanUtils.Init(getApplicationContext());
         initDefault();
+        DBUserUtils.Init(this);
+        ToastHelper.init(this);
     }
 
     /**

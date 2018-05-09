@@ -1,6 +1,5 @@
 package com.demo.bs.demoapp2.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -8,17 +7,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.demo.bs.demoapp2.DBBean.DBUser;
+import com.demo.bs.demoapp2.DBBeanUtils.DBUserUtils;
 import com.demo.bs.demoapp2.R;
 import com.demo.bs.demoapp2.ui.base.BaseActivity;
-import com.demo.bs.demoapp2.utils.HttpUtil;
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
-
 
     private EditText account;
     private EditText password;
     private Button btn_register;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +44,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void submit() {
-        // validate
         String accountString = account.getText().toString().trim();
         if (TextUtils.isEmpty(accountString)) {
             Toast.makeText(this, "账号不能为空", Toast.LENGTH_SHORT).show();
@@ -59,26 +56,15 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             return;
         }
 
-        // TODO validate success, do something
-        String loginapi ="Register";
-        HttpUtil httpUtil = new HttpUtil(getApplicationContext(),loginapi) {
-            @Override
-            protected void onCallback(String json) {
-                if (json.equals("true")){
-                    Toast.makeText(getApplicationContext(), "注册成功", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    finish();
-                }else  if (json.equals("isexist")){
-                    Toast.makeText(getApplicationContext(), "账号已经存在", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(getApplicationContext(), "连接错误", Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
-        httpUtil.addParams("username",accountString);
-        httpUtil.addParams("password",passwordString);
-        httpUtil.sendGetRequest();
-
+        DBUser dbUser = DBUserUtils.getInstance().queryOneData(accountString);
+        if (dbUser == null) {
+            dbUser.setUserNameAsId(accountString);
+            dbUser.setPassword(passwordString);
+            DBUserUtils.getInstance().insertOneData(dbUser);
+            finish();
+        } else {
+            Toast.makeText(this, "此用户名已注册", Toast.LENGTH_SHORT).show();
+        }
     }
 }
 
