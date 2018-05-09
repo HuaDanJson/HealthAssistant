@@ -58,9 +58,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
         DBUser dbUser = DBUserUtils.getInstance().queryOneData(accountString);
         if (dbUser == null) {
-            dbUser.setUserNameAsId(accountString);
-            dbUser.setPassword(passwordString);
-            DBUserUtils.getInstance().insertOneData(dbUser);
+            DBUser dbUser2 = new DBUser();
+            dbUser2.setUserNameAsId(accountString);
+            dbUser2.setPassword(passwordString);
+            DBUserUtils.getInstance().insertOneData(dbUser2);
             finish();
         } else {
             Toast.makeText(this, "此用户名已注册", Toast.LENGTH_SHORT).show();

@@ -1,6 +1,10 @@
 package com.demo.bs.demoapp2.ui.activity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +32,24 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         setContentView(R.layout.activity_login);
         initView();
         setToolbar("登陆");
+        getGetWritePermission();
+    }
+
+    public void getGetWritePermission() {
+        if (Build.VERSION.SDK_INT > 21) {
+            String callPhone = Manifest.permission.CAMERA;
+            String writestorage = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+            String readstorage = Manifest.permission.READ_EXTERNAL_STORAGE;
+            String readsound = Manifest.permission.RECORD_AUDIO;
+            String[] permissions = new String[]{callPhone, writestorage, readstorage, readsound};
+            int selfPermission = ActivityCompat.checkSelfPermission(this, callPhone);
+            int selfwrite = ActivityCompat.checkSelfPermission(this, writestorage);
+            int selfread = ActivityCompat.checkSelfPermission(this, readstorage);
+            int selfsound = ActivityCompat.checkSelfPermission(this, readsound);
+            if (selfPermission != PackageManager.PERMISSION_GRANTED || selfwrite != PackageManager.PERMISSION_GRANTED || selfread != PackageManager.PERMISSION_GRANTED || selfsound != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, permissions, 1);
+            }
+        }
     }
 
     private void initView() {
