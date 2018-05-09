@@ -151,7 +151,10 @@ public class JianKangZhiShuActivity extends AppCompatActivity {
             myViewHolder.btnShare.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AndroidShare as = new AndroidShare(JianKangZhiShuActivity.this, "分享健康数据 :  " + myViewHolder.tvItemTime.getText().toString() + "\n" + myViewHolder.tvItemTitle.getText().toString() + "\n" + myViewHolder.tvItemCount.getText().toString() + "\n", "");
+                    AndroidShare as = new AndroidShare(JianKangZhiShuActivity.this, "分享健康数据 :  "
+                            + myViewHolder.tvItemTime.getText().toString() + "\n"
+                            + myViewHolder.tvItemTitle.getText().toString() + "\n"
+                            + myViewHolder.tvItemCount.getText().toString() + "\n", "");
                     as.show();
                 }
             });
